@@ -27,7 +27,7 @@ jobs:
         run: docker build -t $IMAGE_NAME_BACKEND:latest ./backend
 
       - name: Build frontend Docker image
-        run: docker build -t $IMAGE_NAME_FRONTEND:latest ./frontend
+        run: docker build -t $IMAGE_NAME_FRONTEND:latest ./cookwithlove-frontend
 
       - name: Push backend Docker image
         run: docker push $IMAGE_NAME_BACKEND:latest
