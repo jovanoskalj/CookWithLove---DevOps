@@ -5,23 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4b72c1e0-3400-4cbd-9eaf-30ad1f0a0bc2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/CookWithLove.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/app.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/test_mongo.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cookwithlove-frontend/src/api.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cookwithlove-frontend/src/components/AddRecipeForm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cookwithlove-frontend/src/components/AuthPanel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cookwithlove-frontend/src/components/Navbar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cookwithlove-frontend/src/components/RecipeList.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cookwithlove-frontend/src/pages/Home.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cookwithlove-frontend/src/pages/Login.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cookwithlove-frontend/src/pages/RecipesList.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cookwithlove-frontend/src/pages/Register.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cookwithlove-frontend/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +22,19 @@
       <list>
         <option value="Python Script" />
         <option value="JavaScript File" />
+        <option value="Dockerfile" />
       </list>
+    </option>
+  </component>
+  <component name="FlaskConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform)); sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo, NoAppException&#10;for module in [&quot;main.py&quot;, &quot;wsgi.py&quot;, &quot;app.py&quot;]:&#10;    try: locals().update(ScriptInfo(app_import_path=module, create_app=None).load_app().make_shell_context()); print(&quot;\nFlask App: %s&quot; % app.import_name); break&#10;    except NoAppException: pass">
+    <envs>
+      <env key="FLASK_APP" value="app" />
+    </envs>
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform)); sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo, NoAppException&#10;for module in [&quot;main.py&quot;, &quot;wsgi.py&quot;, &quot;app.py&quot;]:&#10;    try: locals().update(ScriptInfo(app_import_path=module, create_app=None).load_app().make_shell_context()); print(&quot;\nFlask App: %s&quot; % app.import_name); break&#10;    except NoAppException: pass" />
+    <option name="myEnvs">
+      <map>
+        <entry key="FLASK_APP" value="app" />
+      </map>
     </option>
   </component>
   <component name="Git.Settings">
@@ -58,6 +59,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.grazie",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -76,7 +78,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1750878748422</updated>
-      <workItem from="1750878749461" duration="7515000" />
+      <workItem from="1750878749461" duration="8645000" />
     </task>
     <servers />
   </component>
