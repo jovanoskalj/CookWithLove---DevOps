@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: backend-config
+  namespace: cookwithlove
+data:
+  MONGO_DB_NAME: cookwithlove
+  BACKEND_PORT: "5050"
+  FRONTEND_PORT: "80"
+  # Add more non-secret config as needed

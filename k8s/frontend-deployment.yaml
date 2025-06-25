@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cookwithlove-frontend
+  namespace: cookwithlove
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cookwithlove-frontend
+  template:
+    metadata:
+      labels:
+        app: cookwithlove-frontend
+    spec:
+      containers:
+        - name: cookwithlove-frontend
+          image: jovanoskalj21/cookwithlove-frontend:latest
+          ports:
+            - containerPort: 80
+          env:
+            - name: REACT_APP_API_URL
+              value: http://cookwithlove-backend:5050
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: cookwithlove-frontend
+  namespace: cookwithlove
+spec:
+  selector:
+    app: cookwithlove-frontend
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80

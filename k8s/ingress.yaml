@@ -1,0 +1,24 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: cookwithlove-ingress
+  namespace: cookwithlove
+spec:
+  rules:
+    - host: cookwithlove.local
+      http:
+        paths:
+          - path: /api
+            pathType: Prefix
+            backend:
+              service:
+                name: cookwithlove-backend
+                port:
+                  number: 5050
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: cookwithlove-frontend
+                port:
+                  number: 80
