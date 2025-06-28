@@ -6,9 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4b72c1e0-3400-4cbd-9eaf-30ad1f0a0bc2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cookwithlove-frontend/src/pages/RecipesList.js" beforeDir="false" afterPath="$PROJECT_DIR$/cookwithlove-frontend/src/pages/RecipesList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cookwithlove-frontend/src/pages/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/cookwithlove-frontend/src/pages/Register.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +76,7 @@
       <updated>1750878748422</updated>
       <workItem from="1750878749461" duration="26511000" />
       <workItem from="1751112293952" duration="630000" />
-      <workItem from="1751112935670" duration="1642000" />
+      <workItem from="1751112935670" duration="2515000" />
     </task>
     <servers />
   </component>

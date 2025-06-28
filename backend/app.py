@@ -8,11 +8,23 @@ import os
 
 load_dotenv()
 app = Flask(__name__)
-mongo_uri = os.environ["MONGO_URI"]  # <--- CHANGED HERE
+
+# --- SESSION & CORS CONFIG FOR CROSS-ORIGIN AUTH ---
+# Use HTTPS and correct SameSite policy for production/cloud (like Render)
+app.config.update(
+    SESSION_COOKIE_SAMESITE="None",   # allow cross-site cookies
+    SESSION_COOKIE_SECURE=True        # required for SameSite=None (only send cookie over HTTPS)
+)
+# Allow both local and deployed frontend origins
+CORS(app, supports_credentials=True, origins=[
+    "http://localhost:3001",
+    "https://cookwithlove-frontend.onrender.com/"
+])
+
+mongo_uri = os.environ["MONGO_URI"]
 app.config["MONGO_URI"] = mongo_uri
 app.secret_key = os.getenv("SECRET_KEY", "supersecret")
 mongo = PyMongo(app)
-CORS(app, supports_credentials=True)  # Enable cookies for frontend auth
 
 def logged_in():
     return "username" in session
@@ -128,8 +140,6 @@ def api_get_recipe(recipe_id):
         return jsonify({"error": "Recipe not found"}), 404
     recipe["_id"] = str(recipe["_id"])
     return jsonify(recipe)
-
-# (You can keep your HTML routes for manual testing if you want.)
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5050)
