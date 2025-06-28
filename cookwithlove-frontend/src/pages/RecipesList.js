@@ -22,7 +22,7 @@ function RecipesList({ user }) {
   const [editMsg, setEditMsg] = useState("");
 
   const fetchRecipes = () => {
-    API.get("/recipes")
+    API.get("recipes")
       .then(res => setRecipes(res.data))
       .catch(() => setRecipes([]));
   };
@@ -35,7 +35,7 @@ function RecipesList({ user }) {
     e.preventDefault();
     setAddMsg("");
     try {
-      await API.post("/recipes", {
+      await API.post("recipes", {
         title,
         ingredients: ingredients.split(",").map(i => i.trim()),
         instructions,
@@ -63,7 +63,7 @@ function RecipesList({ user }) {
     e.preventDefault();
     setEditMsg("");
     try {
-      await API.put(`/recipes/${editId}`, {
+      await API.put(`recipes/${editId}`, {
         title: editTitle,
         ingredients: editIngredients.split(",").map(i => i.trim()),
         instructions: editInstructions,
@@ -80,7 +80,7 @@ function RecipesList({ user }) {
   const handleDelete = async (id) => {
     if (!window.confirm("Are you sure you want to delete this recipe?")) return;
     try {
-      await API.delete(`/recipes/${id}`);
+      await API.delete(`recipes/${id}`);
       fetchRecipes();
     } catch (err) {
       alert(err.response?.data?.error || "Error deleting recipe");

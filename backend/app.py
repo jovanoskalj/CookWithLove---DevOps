@@ -5,13 +5,10 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from bson.objectid import ObjectId
 from dotenv import load_dotenv
 import os
-import os
-
-
 
 load_dotenv()
 app = Flask(__name__)
-mongo_uri = f"mongodb://{os.environ['MONGO_USER']}:{os.environ['MONGO_PASS']}@{os.environ['MONGO_HOST']}:27017/{os.environ['MONGO_DB']}?authSource=admin"
+mongo_uri = os.environ["MONGO_URI"]  # <--- CHANGED HERE
 app.config["MONGO_URI"] = mongo_uri
 app.secret_key = os.getenv("SECRET_KEY", "supersecret")
 mongo = PyMongo(app)
